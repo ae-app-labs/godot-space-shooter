@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=3 uid="uid://5lpxsvfd0d2w"]
+
+[ext_resource type="FontFile" uid="uid://co20nht1tkn2y" path="res://Bonus/kenvector_future.ttf" id="1_0nagl"]
+[ext_resource type="Script" path="res://scenes/start_game.gd" id="1_s2cgg"]
+[ext_resource type="FontFile" uid="uid://4mlmholprij0" path="res://Bonus/kenvector_future_thin.ttf" id="2_51g7u"]
+
+[node name="StartGame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s2cgg")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1156.0
+offset_bottom = 638.0
+color = Color(0.227451, 0.129412, 0.247059, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_right = 1156.0
+offset_bottom = 635.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_0nagl")
+theme_override_font_sizes/font_size = 60
+text = "Space Shooter"
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_bottom = 40
+
+[node name="Label2" type="Label" parent="CenterContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_51g7u")
+theme_override_font_sizes/font_size = 40
+text = "Press Space to Start"
+
+[node name="Label2" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_0nagl")
+theme_override_font_sizes/font_size = 30
+text = "Movement: ASDF
+Shoot: SPACE"
